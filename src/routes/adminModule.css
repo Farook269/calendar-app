@@ -1,0 +1,377 @@
+:root {
+  --primary-color: #6c5ce7;
+  --secondary-color: #00b894;
+  --background-color: #f8f9fa;
+  --text-color: #2d3436;
+  --border-color: #dfe6e9;
+  --danger-color: #ff7675;
+  --white-color: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Admin Module Container */
+.admin-module {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--white-color);
+  box-shadow: var(--shadow);
+  border-radius: 15px;
+}
+
+.admin-module h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Sections Styling */
+.company-management,
+.communication-method-management {
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.company-management h2,
+.communication-method-management h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Form Styling */
+.admin-module form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  background-color: var(--white-color);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  margin-top: 1.5rem;
+}
+
+.admin-module form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.admin-module form input,
+.admin-module form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.admin-module form input:focus,
+.admin-module form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
+}
+
+.admin-module form textarea {
+  grid-column: 1 / -1;
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Email and Phone Management */
+.email-management,
+.phone-management {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.email-management h4,
+.phone-management h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+.remove-btn {
+  background-color: var(--danger-color);
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.remove-btn:hover {
+  background-color: #e74c3c;
+}
+
+.add-btn {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  align-self: flex-start;
+}
+
+.add-btn:hover {
+  background-color: #00cec9;
+}
+
+/* Button Styling */
+.submit-btn {
+  background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+  color: var(--white-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #8e44ad, var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, var(--danger-color), #e74c3c);
+  color: var(--white-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cancel-btn:hover {
+  background: linear-gradient(135deg, #e74c3c, var(--danger-color));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Lists Styling */
+.company-list,
+.communication-methods-list {
+  margin-top: 1.5rem;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.company-list h3,
+.communication-methods-list h3 {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.75rem;
+}
+
+.company-item,
+.method-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.company-item:hover,
+.method-item:hover {
+  background-color: var(--background-color);
+  transform: scale(1.02);
+  box-shadow: var(--shadow);
+}
+
+.company-actions,
+.method-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.company-actions button,
+.method-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.company-actions button:first-child,
+.method-actions button:first-child {
+  background: linear-gradient(135deg, var(--secondary-color), #00cec9);
+  color: var(--white-color);
+}
+
+.company-actions button:last-child,
+.method-actions button:last-child {
+  background: linear-gradient(135deg, var(--danger-color), #e74c3c);
+  color: var(--white-color);
+}
+
+.company-actions button:last-child:hover,
+.method-actions button:last-child:hover {
+  background: linear-gradient(135deg, #e74c3c, var(--danger-color));
+}
+
+/* Checkbox Styling */
+.admin-module label.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.admin-module label input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Add these styles to your existing CSS */
+
+/* Toggle Button Styling */
+.toggle-form-btn {
+  background: linear-gradient(135deg, var(--primary-color), #8e44ad);
+  color: var(--white-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.toggle-form-btn:hover {
+  background: linear-gradient(135deg, #8e44ad, var(--primary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Collapsible Form Styling */
+.collapsible-form {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+.collapsible-form.open {
+  max-height: 1000px; /* Adjust based on your form height */
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-module {
+    padding: 1rem;
+  }
+
+  .admin-module h1 {
+    font-size: 2rem;
+  }
+
+  .admin-module form {
+    grid-template-columns: 1fr;
+  }
+
+  .email-management,
+  .phone-management {
+    gap: 1rem;
+  }
+
+  .company-list,
+  .communication-methods-list {
+    padding: 1rem;
+  }
+
+  .company-item,
+  .method-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .company-actions,
+  .method-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-module h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-module form {
+    padding: 1rem;
+  }
+
+  .email-management button,
+  .phone-management button {
+    width: 100%;
+  }
+}
